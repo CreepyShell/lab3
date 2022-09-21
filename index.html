@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <script>
+        let vegetarian = "Lots of mushrooms, black olives, bell peppers, onions, artichoke hearts, and fresh tomatoes. ";
+        let hawaiian = "Overloaded with juicy pineapple, smoked bacon, sliced ham, roasted red peppers, provolone cheese, and mozzarella cheese on a cheesy Parmesan crust.";
+        let meatLovers = "Loads of pepperoni, savory Italian sausage, smoked bacon, hamburger, mushrooms, and extra cheese.";
+        let theWorks = "An irresistible combination of pepperoni, ham, spicy Italian sausage, fresh-sliced onions and green peppers, gourmet baby portabella mushrooms, and ripe black olives.";
+        let fourCheese = "Thin-crust pizza with a four-cheese blend of mozzarella, Parmesan, Romano, and Asiago, along with our special seasoning.";
+        let textarea = "";
+        function text(i) {
+            let el = document.getElementById("pizzaDesc");
+            if (i == 0) {
+                el.value = vegetarian;
+            }
+            if (i == 1) {
+                el.value = hawaiian;
+            }
+            if (i == 2) {
+                el.value = meatLovers;
+            }
+            if (i == 3) {
+                el.value = theWorks;
+            }
+            if (i == 4) {
+                el.value = fourCheese;
+            }
+        }
+    </script>
+    <title>
+
+    </title>
+
+</head>
+
+<body>
+</body>
+<p>Click the buttons for a description of each pizza.</p>
+<form action="" method="get">
+    <label for="vegetarian">Vegetarian</label><input id="vegetarian" name="pizzas" onclick="text(0)" type="radio"><br>
+    <label for="hawaiian">Hawaiian</label><input id="hawaiian" name="pizzas" onclick="text(1)" type="radio"><br>
+    <label for="meatLovers">MeatLovers</label><input id="meatLovers" name="pizzas" onclick="text(2)" type="radio"><br>
+    <label for="theWorks">TheWorks</label><input id="theWorks" name="pizzas" onclick="text(3)" type="radio"><br>
+    <label for="fourCheese">FourCheese</label><input id="fourCheese" name="pizzas" onclick="text(4)" type="radio">
+</form>
+<textarea style="background-color:Transparent; border:none; overflow:hidden; font:10px Tahoma; 
+    color:#3F3F3F; " name="" id="pizzaDesc" cols="75" rows="20">
+
+    </textarea>
+
+</html>
