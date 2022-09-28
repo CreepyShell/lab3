@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>Title
+	</title>
+	<meta charset="UTF-8">
+	<script src="function.js"></script>
+	<script>
+		//let number = parseInt(window.prompt("Enter a number"));		
+		/*let message = number >= 100 ? "Number more than or equals 100" : "Number less than 100";
+		alert(message);*/
+		//alert(isMoreThanHundred(number));
+	</script>
+</head>
+<body>
+	<!--First method-->
+	<form method="get">
+	<label for="fahrenheit">Enter fahrenheit degrees </label>
+		<input id="fahrenheit" type="number"><br>
+	<label for="Celcius">Here the Celcius degrees: </label>
+		<input disabled="true" id="Celcius" type="number"><br>
+
+	<input type="button" value="Press to calculate" onclick="
+			document.getElementById('Celcius').value = Math.round(
+			convertToCelcius(document.getElementById('fahrenheit').value)*100)/100">
+	</form>
+	
+	<!--Second method-->
+	<form method="get">
+	<label for="fahrenheit2">Enter fahrenheit degrees </label>
+		<input id="fahrenheit2" type="number"><br>
+	<label for="Celcius2">Here the Celcius degrees: </label>
+		<input disabled="true" id="Celcius2" type="number"><br>
+
+	<input type="button" value="Press to calculate" onclick="allWork()">
+	</form>
+</body>
+</html>
