@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='cs'>
+  <head>
+    
+    <meta charset='utf-8'/>
+
+    <title>Exercise 1</title>
+	<script>
+		function calcPrice(price){
+			if(price <= 20){
+				return price + 1.5;
+			}
+			return price + price * 0.1;
+		}
+	</script>
+	</head>
+	
+	<body>
+		<label for="price">Enter the price of purchase</label><input type="number" min="0" id="price"><br>
+		<label for="final_price">The final price is </label><input disabled="true" id="final_price"><br>
+		<input type="button" value="click to calculate the final price" onclick="{
+			let start_price = document.getElementById('price').value;
+			document.getElementById('final_price').value = calcPrice(Number(start_price));
+		}">
+	</body>
+</html>
+   
