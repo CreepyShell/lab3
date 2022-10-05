@@ -12,6 +12,20 @@
 			}
 			return price + price * 0.1;
 		}
+		
+		function calcBodyMassIndex(weight, height){
+			return weight * weight * 703 / (Math.pow(height, 2));
+		}
+		
+		function calcPay(hours, rate){
+			if(hours > 60){
+				alert("No employee may be paid for more than 60 hours ");
+				return -100;
+			}
+			return hours * rate;
+		}
+		
+		
 	</script>
 	</head>
 	
@@ -21,7 +35,31 @@
 		<input type="button" value="click to calculate the final price" onclick="{
 			let start_price = document.getElementById('price').value;
 			document.getElementById('final_price').value = calcPrice(Number(start_price));
+		}"><br><br><br>
+		
+		
+		<label for="weight">Enter your weight</label><input type="number" min="0" id="weight"><br>
+		<label for="height">Enter your height </label><input id="height"><br>
+		<label for="mass">The body mass index is </label><input disabled="true" id="mass"><br>
+		<input type="button" value="click to calculate the body mass index" onclick="{
+			let weight = document.getElementById('weight').value;
+			let height = document.getElementById('height').value;
+			document.getElementById('mass').value = calcBodyMassIndex(Number(weight), Number(height));
+		}"><br><br><br>
+		
+		
+		<label for="hours">Enter hours</label><input type="number" min="0" id="hours"><br>
+		<label for="rate">Enter a rate </label><input id="rate"><br>
+		<label for="salary">The salary is </label><input disabled="true" id="salary"><br>
+		<input type="button" value="click to calculate the salaty" onclick="{
+			let hours = document.getElementById('hours').value;
+			let rate = document.getElementById('rate').value;
+			document.getElementById('salary').value = calcPay(Number(hours), Number(rate));
 		}">
+		<br><br><br>
+		
+		
+		
 	</body>
 </html>
    
